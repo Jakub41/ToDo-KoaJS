@@ -1,0 +1,29 @@
+{
+  "name": "koa-graphql-app",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^12.7.2",
+    "apollo-server-koa": "^2.9.0",
+    "graphql": "^14.5.1",
+    "koa": "^2.8.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-ejs": "^4.2.0",
+    "koa-json": "^2.0.2",
+    "koa-router": "^7.4.0",
+    "pg": "^7.12.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-node": "^8.3.0",
+    "tsconfig-paths": "^3.8.0",
+    "typeorm": "^0.2.18",
+    "typescript": "^3.5.3"
+  },
+  "devDependencies": {
+    "jshint": "^2.10.2",
+    "jslint": "^0.12.1",
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start": "nodemon"
+  }
+}
