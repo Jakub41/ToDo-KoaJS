@@ -9,3 +9,4 @@ temp/
 .env
 dist
 pgdata
+yarn-error.log
