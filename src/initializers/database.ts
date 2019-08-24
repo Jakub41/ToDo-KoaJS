@@ -16,7 +16,19 @@ export const databaseInitializer = async () => {
         ],
         logging: ['query', 'error'],
         synchronize: true,
-      }).then((...args) => {
+      }).then(async (connection) => {
         console.log('Database connection established');
+        
+        /** To Create Some Fake Data Example **/
+
+        // Create new instance
+        // const card = new Card();
+        // card.title = 'First card';
+        // card.done  = false;
+        
+        // Persist to database
+        // const card_1 = await connection.manager
+        //       .save(card);
+        //   console.log('card saved');
     });
 };

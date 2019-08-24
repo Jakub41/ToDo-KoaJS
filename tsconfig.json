@@ -6,7 +6,7 @@
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "lib": [
-            "es2017"
+            "es2019"
         ],
         "types": [
             "node"
