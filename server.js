@@ -11,4 +11,4 @@ app.use(bodyParser());
 app.use(async ctx => ctx.body = { msg:'Server running...' });
 
 // Server Listner
-app.listen(4000, () => console.log('Server Started...'));
+app.listen(PORT, () => console.log('Server Started...'));
