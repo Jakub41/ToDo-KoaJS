@@ -1,8 +1,6 @@
 import * as Koa from 'koa';
 import { databaseInitializer } from './initializers/database';
-
-const dotenv = require('dotenv');
-dotenv.config();
+import { PORT } from './initializers/config';
 
 const bootstrap = async () => {
     await databaseInitializer();
@@ -13,7 +11,7 @@ const bootstrap = async () => {
         ctx.body = "It works!\n";
     });
 
-    app.listen(process.env.DB_PORT);
+    app.listen(PORT);
 };
 
 bootstrap();
