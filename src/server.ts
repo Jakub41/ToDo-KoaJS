@@ -1,6 +1,6 @@
 import * as Koa from 'koa';
 import { databaseInitializer } from './initializers/database';
-import { PORT } from './initializers/config';
+import { SERVER_PORT } from './initializers/config';
 
 const bootstrap = async () => {
     await databaseInitializer();
@@ -11,7 +11,7 @@ const bootstrap = async () => {
         ctx.body = "It works!\n";
     });
 
-    app.listen(PORT);
+    app.listen(SERVER_PORT);
 };
 
 bootstrap();

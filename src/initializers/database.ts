@@ -1,7 +1,7 @@
 import { createConnection } from 'typeorm';
 import { Card } from '../entities/card';
 
-import { HOST, USERRNAME, PASSWORD, DB } from './config';
+import { HOST, PORT, USERRNAME, PASSWORD, DB } from './config';
 
 export const databaseInitializer = async () => {
 
@@ -9,7 +9,7 @@ export const databaseInitializer = async () => {
 
         type: 'postgres',
         host: HOST,
-        port: 5432, // PORT .env not working here ???
+        port: Number(PORT),
         username: USERRNAME,
         password: PASSWORD,
         database: DB,
