@@ -1,9 +1,7 @@
 import * as Koa from 'koa';
 
-import { databaseInitializer } from './initializers/database';
-import { SERVER_PORT } from './initializers/config';
-import { server } from './initializers/apollo-server';
-import { routes,  } from './routes';
+import { databaseInitializer, server, SERVER_PORT } from './initializers/index';
+import { routes } from './routes';
 
 const bootstrap = async () => {
     await databaseInitializer();

@@ -1,20 +1,16 @@
 import { makeExecutableSchema } from 'graphql-tools';
-const { gql } = require('apollo-server-koa')
 
+import { Query }     from '../graphql/types/query';
+import { Mutation }  from '../graphql/types/mutation';
+import { types }     from '../graphql/types';
+import { resolvers } from '../graphql/resolvers';
 
-import { Query }     from './types/query';
-import { Mutation }  from './types/mutation';
-import { types }     from './types';
-import { resolvers } from './resolvers';
-
-
-const schemaDefinition = gql`
+const schemaDefinition = `
     schema {
         query    : Query
         mutation : Mutation
     }
 `;
-
 
 const typeDefs = [
     schemaDefinition,
@@ -22,7 +18,6 @@ const typeDefs = [
     Mutation,
     ...types,
 ];
-
 
 export const schema = makeExecutableSchema({
     typeDefs,

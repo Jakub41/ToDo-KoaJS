@@ -1,4 +1,4 @@
-const dotenv = require('dotenv');
+export const dotenv = require('dotenv');
 dotenv.config();
 
 // Server
