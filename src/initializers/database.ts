@@ -32,5 +32,6 @@ export const databaseInitializer = async () => {
         // const card_1 = await connection.manager
         //       .save(card);
         //   console.log('card saved');
-    });
+
+    }).catch(error => console.log('Connection error: ', error));;
 };

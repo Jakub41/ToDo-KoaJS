@@ -5,8 +5,8 @@ import { toggleCardMutation } from '../graphql/mutations/toggle-card';
 import { updateCardMutation } from '../graphql/mutations/update-card';
 import { createCardMutation } from '../graphql/mutations/create-card';
 
-
 export const resolvers = {
+    
     Query: {
         ...cardsResolver,
         ...cardResolver,
