@@ -4,7 +4,7 @@ import { Kind } from 'graphql/language';
 export default new GraphQLScalarType({
     name: 'Date',
     description: 'Date type',
-    parseValue(value) {
+    parseValue(value): Date {
         // value comes from the client
         return new Date(value); // sent to resolvers
     },
@@ -12,7 +12,7 @@ export default new GraphQLScalarType({
         // value comes from resolvers
         return value.toISOString(); // sent to the client
     },
-    parseLiteral(ast) {
+    parseLiteral(ast): Date {
         // ast comes from parsing the query
         // this is where you can validate and transform
         if (ast.kind !== Kind.STRING) {
