@@ -1,8 +1,8 @@
 import { getRepository } from 'typeorm';
-import { Card }          from '../../entities/card';
+import { Card } from '../../entities/card';
 
 export const toggleCardMutation = {
-    async toggleCard(_, { id }) {
+    async toggleCard(_, { id }): Promise<Card> {
         const repository = getRepository(Card);
         const card = await repository.findOne({ id });
         const done = !card.done;
@@ -11,5 +11,5 @@ export const toggleCardMutation = {
             ...card,
             done,
         };
-    }
+    },
 };

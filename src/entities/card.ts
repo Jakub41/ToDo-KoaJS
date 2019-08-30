@@ -1,14 +1,7 @@
-import {
-    Entity,
-    PrimaryGeneratedColumn,
-    Column,
-    CreateDateColumn,
-    UpdateDateColumn,
-} from 'typeorm';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
 
 @Entity('cards')
 export class Card {
-
     @PrimaryGeneratedColumn('uuid')
     id: string;
 
@@ -27,7 +20,7 @@ export class Card {
     description: string;
 
     @Column('boolean', {
-        default: "false",
+        default: 'false',
     })
     done: boolean;
 }

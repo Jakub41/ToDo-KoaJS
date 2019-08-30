@@ -1,4 +1,4 @@
-import { cardResolver }  from '../graphql/resolvers/card';
+import { cardResolver } from '../graphql/resolvers/card';
 import { cardsResolver } from '../graphql/resolvers/cards';
 
 import { toggleCardMutation } from '../graphql/mutations/toggle-card';
@@ -6,7 +6,10 @@ import { updateCardMutation } from '../graphql/mutations/update-card';
 import { createCardMutation } from '../graphql/mutations/create-card';
 
 export const resolvers = {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
     Query: {
         ...cardsResolver,
         ...cardResolver,
