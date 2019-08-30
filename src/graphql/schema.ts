@@ -13,8 +13,6 @@ const schemaDefinition = `
 `;
 
 const typeDefs = [
-    scalar Date,
-    scalar DateTime,
     schemaDefinition,
     Query,
     Mutation,
