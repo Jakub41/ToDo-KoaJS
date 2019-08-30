@@ -4,7 +4,9 @@ export const Card = `
         title       : String
         description : String
         done        : Boolean
-        created_at  : String
-        updated_at  : String
+        created_at  : Date
+        updated_at  : Date
     }
+
+    scalar Date
 `;

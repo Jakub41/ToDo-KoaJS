@@ -17,4 +17,5 @@ const typeDefs = [schemaDefinition, Query, Mutation, ...types];
 export const schema = makeExecutableSchema({
     typeDefs,
     resolvers,
+    logger: { log: e => console.log(e) },
 });
