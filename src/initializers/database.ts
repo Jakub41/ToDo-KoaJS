@@ -20,22 +20,10 @@ export const databaseInitializer = async (): Promise<void> => {
 
             /** To Create Some Fake Data Example **/
 
-<<<<<<< HEAD
-        // Create new instance
-        // const card = new Card();
-        // card.title = 'Card 2';
-        // card.done  = false;
-        
-        // Persist to database
-        // const card_1 = await connection.manager
-        //       .save(card);
-        //   console.log('card saved');
-=======
             // Create new instance
             // const card = new Card();
             // card.title = 'First card';
             // card.done  = false;
->>>>>>> master
 
             // Persist to database
             // const card_1 = await connection.manager
