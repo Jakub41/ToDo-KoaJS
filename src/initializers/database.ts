@@ -25,7 +25,7 @@ export const databaseInitializer = async () => {
 
         // Create new instance
         // const card = new Card();
-        // card.title = 'First card';
+        // card.title = 'Card 2';
         // card.done  = false;
         
         // Persist to database
