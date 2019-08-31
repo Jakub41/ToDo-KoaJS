@@ -1,22 +1,22 @@
 import { createConnection } from 'typeorm';
 import { Card } from '../entities/card';
 
-import { HOST, PORT, USERRNAME, PASSWORD, DB } from './config';
+import { config } from './config';
 
 export const databaseInitializer = async (): Promise<void> => {
     return await createConnection({
         type: 'postgres',
-        host: HOST,
-        port: Number(PORT),
-        username: USERRNAME,
-        password: PASSWORD,
-        database: DB,
+        host: config.dbHost,
+        port: config.dbPort,
+        username: config.dbUsername,
+        password: config.dbPassword,
+        database: config.database,
         entities: [Card],
         logging: ['query', 'error'],
         synchronize: true,
     })
         .then(async connection => {
-            console.log(`Database connection established on port: ${PORT}`);
+            console.log(`Database connection established on port: ${config.dbPort}`);
 
             /** To Create Some Fake Data Example **/
 

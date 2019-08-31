@@ -19,7 +19,9 @@
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@types/dotenv": "^6.1.1",
     "@types/node": "^12.7.2",
+    "@types/uuid": "^3.4.5",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.2",
