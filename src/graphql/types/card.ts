@@ -6,7 +6,7 @@ export const Card = `
         title       : String
         description : String
         done        : Boolean
-        created_at  : Date!
-        updated_at  : Date!
+        created_at  : Date
+        updated_at  : Date
     }
 `;

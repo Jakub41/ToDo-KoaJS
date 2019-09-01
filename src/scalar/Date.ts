@@ -6,13 +6,13 @@ export default new GraphQLScalarType({
     name: 'Date',
     description: 'Date type',
     parseValue(value): Date {
-        if (isISO8601(value))
+        if (isISO8601)
             // value comes from the client
             return new Date(value); // sent to resolvers
         throw new Error('DateTime cannot represent an invalid ISO-8601 Date string');
     },
-    serialize(value): Promise<string> {
-        if (isISO8601(value))
+    serialize(value): Promise<Date> {
+        if (isISO8601)
             // value comes from resolvers
             return value.toISOString(); // sent to the client
         throw new Error('DateTime cannot represent an invalid ISO-8601 Date string');
