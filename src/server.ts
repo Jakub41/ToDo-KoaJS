@@ -1,6 +1,6 @@
-import * as Koa from 'koa';
+import Koa = require('koa');
 
-import { databaseInitializer, server, SERVER_PORT } from './initializers/index';
+import { databaseInitializer, server, config } from './initializers/index';
 import { routes } from './routes';
 
 const bootstrap = async (): Promise<void> => {
@@ -10,7 +10,9 @@ const bootstrap = async (): Promise<void> => {
 
     app.use(routes.routes())
         .use(routes.allowedMethods())
-        .listen(SERVER_PORT, () => console.log(`The app is listening on ${server.graphqlPath}! Port: ${SERVER_PORT}`));
+        .listen(config.serverPort, () =>
+            console.log(`The app is listening on ${server.graphqlPath}! Port: ${config.serverPort}`),
+        );
 
     server.applyMiddleware({ app });
 };

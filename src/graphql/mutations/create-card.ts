@@ -1,4 +1,4 @@
-import * as uuid from 'uuid/v4';
+import uuid = require('uuid/v4');
 
 import { getRepository } from 'typeorm';
 import { Card } from '../../entities/card';
