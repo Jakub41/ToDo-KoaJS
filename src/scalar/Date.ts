@@ -1,16 +1,21 @@
 import { GraphQLScalarType, GraphQLError } from 'graphql';
 import { Kind } from 'graphql/language';
+import { isISO8601 } from 'validator';
 
 export default new GraphQLScalarType({
     name: 'Date',
     description: 'Date type',
     parseValue(value): Date {
-        // value comes from the client
-        return new Date(value); // sent to resolvers
+        if (isISO8601(value))
+            // value comes from the client
+            return new Date(value); // sent to resolvers
+        throw new Error('DateTime cannot represent an invalid ISO-8601 Date string');
     },
     serialize(value): Promise<string> {
-        // value comes from resolvers
-        return value.toISOString(); // sent to the client
+        if (isISO8601(value))
+            // value comes from resolvers
+            return value.toISOString(); // sent to the client
+        throw new Error('DateTime cannot represent an invalid ISO-8601 Date string');
     },
     parseLiteral(ast): Date {
         // ast comes from parsing the query
@@ -21,6 +26,9 @@ export default new GraphQLScalarType({
         if (isNaN(Date.parse(ast.value))) {
             throw new GraphQLError(`Query error: not a valid date`, [ast]);
         }
-        return new Date(ast.value);
+
+        if (isISO8601(ast.value)) return new Date(ast.value);
+
+        throw new Error('DateTime cannot represent an invalid ISO-8601 Date string');
     },
 });

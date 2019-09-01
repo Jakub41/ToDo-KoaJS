@@ -19,12 +19,14 @@
     "tsconfig-paths": "^3.8.0",
     "typeorm": "^0.2.18",
     "typescript": "^3.5.3",
+    "validator": "^11.1.0",
     "winston": "^3.2.1"
   },
   "devDependencies": {
     "@types/dotenv": "^6.1.1",
     "@types/node": "^12.7.2",
     "@types/uuid": "^3.4.5",
+    "@types/validator": "^10.11.3",
     "@typescript-eslint/eslint-plugin": "^2.0.0",
     "@typescript-eslint/parser": "^2.0.0",
     "eslint": "^6.2.2",
