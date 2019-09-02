@@ -5,6 +5,8 @@ import { toggleCardMutation } from '../graphql/mutations/toggle-card';
 import { updateCardMutation } from '../graphql/mutations/update-card';
 import { createCardMutation } from '../graphql/mutations/create-card';
 
+import Date from '../scalar/Date';
+
 export const resolvers = {
     Query: {
         ...cardsResolver,
@@ -16,4 +18,6 @@ export const resolvers = {
         ...updateCardMutation,
         ...createCardMutation, // <-- add mutation to schema
     },
+
+    Date,
 };
