@@ -1,4 +1,4 @@
-# This PR resolves the following issue:
+# This PR resolves the following issue
 
 // -> Reference to the issue
 
