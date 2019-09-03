@@ -1,5 +1,5 @@
 export const UserQuery = `
-    type UserQuery {
+    extend type Query {
         users: [User]
         user(id: String!): User
     }

@@ -9,8 +9,8 @@ import { resolvers } from '../graphql/resolvers';
 
 const schemaDefinition = `
     schema {
-        query     : Query
-        mutation  : Mutation
+        query         : Query
+        mutation      : Mutation
     }
 `;
 

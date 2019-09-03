@@ -1,11 +1,11 @@
 export const UserMutation = `
-    type UserMutation {
+    extend type Mutation {
       createUser (
         user: NewUserPatch!
       ): User
-      updateUser {
+      updateUser (
         id: String!
         patch: UserPatch!
-      }: User
+      ): User
     }
 `;

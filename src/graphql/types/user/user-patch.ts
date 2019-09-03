@@ -1,6 +1,6 @@
 export const UserPatch = `
     input UserPatch {
-        name       : String
-        lastName   : String
+        name         : String
+        last_namee   : String
     }
 `;
