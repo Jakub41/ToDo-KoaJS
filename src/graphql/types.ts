@@ -1,16 +1,15 @@
-import { Card } from './types/card/card';
-import { CardPatch } from './types/card/card-patch';
-import { NewCardPatch } from './types/card/new-card-patch';
-
-import { User } from './types/user/user';
-import { UserPatch } from './types/user/user-patch';
-import { NewUserPatch } from './types/user/new-user-patch';
+import { Types } from './types/types';
 
 export const types = [
-    Card,
-    CardPatch,
-    NewCardPatch,
-    User,
-    UserPatch,
-    NewUserPatch, // <-- add type here
+    // Card Types
+    Types.cardTypes.card,
+    Types.cardTypes.newCard,
+    Types.cardTypes.updateCard,
+
+    // User Types
+    Types.userTypes.user,
+    Types.userTypes.newUser,
+    Types.userTypes.updateUser,
+
+    // <-- add type here
 ];
