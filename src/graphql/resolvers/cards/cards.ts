@@ -1,5 +1,5 @@
 import { getRepository } from 'typeorm';
-import { Card } from '../../entities/card';
+import { Card } from '../../../entities/card';
 
 export const cardsResolver = {
     async cards(): Promise<Card[]> {

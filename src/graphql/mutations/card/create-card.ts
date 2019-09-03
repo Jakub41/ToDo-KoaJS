@@ -1,7 +1,7 @@
 import uuid = require('uuid/v4');
 
 import { getRepository } from 'typeorm';
-import { Card } from '../../entities/card';
+import { Card } from '../../../entities/card';
 
 export const createCardMutation = {
     async createCard(_, { card: attrs }): Promise<Card> {
