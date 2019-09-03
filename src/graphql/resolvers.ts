@@ -1,26 +1,18 @@
-import { cardResolver } from './resolvers/cards/card';
-import { cardsResolver } from './resolvers/cards/cards';
-
-import { userResolver } from './resolvers/users/user';
-import { usersResolver } from './resolvers/users/users';
+import { Resolvers } from './resolvers/resolvers';
 
 import { Mutations } from './mutations/mutations';
-
-// import { toggleCardMutation } from './mutations/card/toggle-card';
-// import { updateCardMutation } from './mutations/card/update-card';
-// import { createCardMutation } from './mutations/card/create-card';
-
-// import { updateUserMutation } from './mutations/user/update-user';
-// import { createUserMutation } from './mutations/user/create-user';
 
 import Date from '../scalar/Date';
 
 export const resolvers = {
     Query: {
-        ...cardsResolver,
-        ...cardResolver,
-        ...usersResolver,
-        ...userResolver,
+        // Card Resolvers
+        ...Resolvers.card.cards,
+        ...Resolvers.card.card,
+
+        // User Resolvers
+        ...Resolvers.user.users,
+        ...Resolvers.user.user,
     },
 
     Mutation: {
