@@ -1,9 +1,9 @@
 import { getRepository } from 'typeorm';
-import { Card } from '../../../entities/card';
+import { Entities } from '../../../entities/entities';
 
 export const updateCardMutation = {
-    async updateCard(_, { id, patch }): Promise<Card> {
-        const repository = getRepository(Card);
+    async updateCard(_, { id, patch }): Promise<typeof card> {
+        const repository = getRepository(Entities.card);
         const card = await repository.findOne({ id });
         const result = await repository.update(id, { ...patch });
         return {

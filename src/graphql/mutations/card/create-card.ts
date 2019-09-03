@@ -1,11 +1,11 @@
 import uuid = require('uuid/v4');
 
 import { getRepository } from 'typeorm';
-import { Card } from '../../../entities/card';
+import { Entities } from '../../../entities/entities';
 
 export const createCardMutation = {
-    async createCard(_, { card: attrs }): Promise<Card> {
-        const repository = getRepository(Card);
+    async createCard(_, { card: attrs }): Promise<typeof card> {
+        const repository = getRepository(Entities.card);
         const card = {
             id: uuid(),
             ...attrs,
