@@ -1,9 +1,5 @@
 import { makeExecutableSchema } from 'graphql-tools';
-
-import { Query } from './types/card/query';
-import { Mutation } from './types/card/mutation';
-import { UserQuery } from './types/user/query';
-import { UserMutation } from './types/user/mutation';
+import { Types } from './types/types';
 import { types } from '../graphql/types';
 import { resolvers } from '../graphql/resolvers';
 
@@ -14,7 +10,14 @@ const schemaDefinition = `
     }
 `;
 
-const typeDefs = [schemaDefinition, Query, UserQuery, Mutation, UserMutation, ...types];
+const typeDefs = [
+    schemaDefinition,
+    Types.cardTypes.query,
+    Types.userTypes.query,
+    Types.cardTypes.mutation,
+    Types.userTypes.mutation,
+    ...types,
+];
 
 export const schema = makeExecutableSchema({
     typeDefs,
