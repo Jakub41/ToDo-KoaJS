@@ -8,13 +8,17 @@ const schemaDefinition = `
     }
 `;
 
-export const TypeDefs = {
+const TypeDefs = [
     schemaDefinition,
     // Card Type Def
-    cardDef: [Types.cardTypes.query, Types.cardTypes.mutation],
+    Types.cardTypes.query,
+    Types.cardTypes.mutation,
 
     // User Type Def
-    userDef: [Types.userTypes.query, Types.userTypes.mutation],
+    Types.userTypes.query,
+    Types.userTypes.mutation,
 
     ...types,
-};
+];
+
+export { TypeDefs as default };
