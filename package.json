@@ -51,6 +51,7 @@
     "*.{js,jsx,ts,tsx,md,html}": [
       "eslint --fix",
       "prettier --write",
+      "tslint --fix --project .",
       "git add"
     ]
   }
