@@ -1,9 +1,9 @@
 import { getRepository } from 'typeorm';
-import { User } from '../../../entities/user';
+import { Entities } from '../../../entities/entities';
 
 export const usersResolver = {
-    async users(): Promise<User[]> {
-        const repository = getRepository(User);
+    async users(): Promise<typeof usersResolver[]> {
+        const repository = getRepository(Entities.user);
         return await repository.find();
     },
 };

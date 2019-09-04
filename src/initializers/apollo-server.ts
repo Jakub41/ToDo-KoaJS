@@ -1,6 +1,6 @@
 import { schema } from '../graphql/schema';
 
-const { ApolloServer } = require('apollo-server-koa');
+import { ApolloServer } from 'apollo-server-koa';
 
 export const server = new ApolloServer({
     schema: schema,

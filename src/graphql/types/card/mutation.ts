@@ -1,4 +1,4 @@
-export const Mutation = `
+export const CardMutation = `
     type Mutation {
         toggleCard (
             id: String!

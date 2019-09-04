@@ -4,6 +4,7 @@ dotenv.config();
 export interface Config {
     //Server set
     serverPort: number;
+    serverUrl: string;
 
     // Database set
     dbPort: number;
@@ -16,6 +17,7 @@ export interface Config {
 const config: Config = {
     // Server
     serverPort: +process.env.SERVER_PORT || 4000,
+    serverUrl: process.env.SERVER_URL,
 
     // Database
     dbPort: +process.env.DB_PORT || 5432,

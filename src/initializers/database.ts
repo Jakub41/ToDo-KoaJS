@@ -16,7 +16,7 @@ export const databaseInitializer = async (): Promise<void> => {
         logging: ['query', 'error'],
         synchronize: true,
     })
-        .then(async connection => {
+        .then(async () => {
             console.log(`Database connection established on port: ${config.dbPort}`);
 
             /** To Create Some Fake Data Example **/
