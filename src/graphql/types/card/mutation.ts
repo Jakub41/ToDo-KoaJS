@@ -11,5 +11,8 @@ export const CardMutation = `
         createCard (
             card: NewCardPatch!
         ): Card
+        deleteCard (
+          id: String!
+        ): Card
     }
 `;

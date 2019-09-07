@@ -20,6 +20,7 @@ export const resolvers = {
         ...Mutations.card.create,
         ...Mutations.card.update,
         ...Mutations.card.toggle,
+        ...Mutations.card.delete,
 
         // User Mutations
         ...Mutations.user.create,
