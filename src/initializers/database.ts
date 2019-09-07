@@ -1,5 +1,6 @@
 import { createConnection } from 'typeorm';
 import { Card } from '../entities/card';
+import { User } from '../entities/user';
 
 import { config } from './config';
 
@@ -11,11 +12,11 @@ export const databaseInitializer = async (): Promise<void> => {
         username: config.dbUsername,
         password: config.dbPassword,
         database: config.database,
-        entities: [Card],
+        entities: [Card, User],
         logging: ['query', 'error'],
         synchronize: true,
     })
-        .then(async connection => {
+        .then(async () => {
             console.log(`Database connection established on port: ${config.dbPort}`);
 
             /** To Create Some Fake Data Example **/

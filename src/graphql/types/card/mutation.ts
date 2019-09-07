@@ -1,4 +1,4 @@
-export const Mutation = `
+export const CardMutation = `
     type Mutation {
         toggleCard (
             id: String!
@@ -10,6 +10,9 @@ export const Mutation = `
         # add mutation here
         createCard (
             card: NewCardPatch!
+        ): Card
+        deleteCard (
+          id: String!
         ): Card
     }
 `;

@@ -1,23 +1,32 @@
-import { cardResolver } from '../graphql/resolvers/card';
-import { cardsResolver } from '../graphql/resolvers/cards';
+import { Resolvers } from './resolvers/resolvers';
 
-import { toggleCardMutation } from '../graphql/mutations/toggle-card';
-import { updateCardMutation } from '../graphql/mutations/update-card';
-import { createCardMutation } from '../graphql/mutations/create-card';
+import { Mutations } from './mutations/mutations';
 
 import Date from '../scalar/Date';
 
 export const resolvers = {
     Query: {
-        ...cardsResolver,
-        ...cardResolver,
+        // Card Resolvers
+        ...Resolvers.card.cards,
+        ...Resolvers.card.card,
+
+        // User Resolvers
+        ...Resolvers.user.users,
+        ...Resolvers.user.user,
     },
 
     Mutation: {
-        ...toggleCardMutation,
-        ...updateCardMutation,
-        ...createCardMutation, // <-- add mutation to schema
+        // Card Muations
+        ...Mutations.card.create,
+        ...Mutations.card.update,
+        ...Mutations.card.toggle,
+        ...Mutations.card.delete,
+
+        // User Mutations
+        ...Mutations.user.create,
+        ...Mutations.user.update, // <-- add mutation to schema
     },
 
+    // Custom Scalars
     Date,
 };
