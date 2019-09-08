@@ -5,5 +5,7 @@ export const User = `
         last_name     : String
         created_at    : Date
         updated_at    : Date
+        email         : String!
+        password      : String
     }
 `;
