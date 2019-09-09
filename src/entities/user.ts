@@ -17,6 +17,12 @@ export class User {
     @Column('text', { nullable: false })
     password: string;
 
+    @Column('text', { nullable: true })
+    bio: string;
+
+    @Column('text', { nullable: true })
+    profile_picture: string;
+
     @CreateDateColumn()
     created_at: Date;
 
