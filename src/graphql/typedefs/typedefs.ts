@@ -10,6 +10,7 @@ const schemaDefinition = `
 
 const TypeDefs = [
     schemaDefinition,
+
     // Card Type Def
     Types.cardTypes.query,
     Types.cardTypes.mutation,
