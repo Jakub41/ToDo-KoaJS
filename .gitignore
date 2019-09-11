@@ -10,3 +10,4 @@ temp/
 dist
 pgdata
 yarn-error.log
+ormconfig.docker.json
