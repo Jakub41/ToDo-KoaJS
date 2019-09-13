@@ -1,6 +1,5 @@
 import { createConnection } from 'typeorm';
-import { Card } from '../entities/card';
-import { User } from '../entities/user';
+import { Entities } from '../entities/entities';
 
 import { config } from './config';
 
@@ -12,7 +11,7 @@ export const databaseInitializer = async (): Promise<void> => {
         username: config.dbUsername,
         password: config.dbPassword,
         database: config.database,
-        entities: [Card, User],
+        entities: [Entities.user, Entities.card],
         logging: ['query', 'error'],
         synchronize: true,
     })

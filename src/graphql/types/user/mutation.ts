@@ -7,5 +7,8 @@ export const UserMutation = `
         id: String!
         patch: UserPatch!
       ): User
+      deleteUser (
+        id: String!
+      ): User
     }
 `;
