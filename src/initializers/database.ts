@@ -11,7 +11,7 @@ export const databaseInitializer = async (): Promise<void> => {
         username: config.dbUsername,
         password: config.dbPassword,
         database: config.database,
-        entities: [Entities.user, Entities.card],
+        entities: [Entities.user, Entities.card, Entities.profile],
         logging: ['query', 'error'],
         synchronize: true,
     })

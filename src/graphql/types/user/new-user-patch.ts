@@ -4,6 +4,5 @@ export const NewUserPatch = `
         last_name   : String
         email       : String!
         confirmed   : String
-
     }
 `;

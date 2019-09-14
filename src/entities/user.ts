@@ -1,4 +1,13 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
+import {
+    Entity,
+    PrimaryGeneratedColumn,
+    Column,
+    CreateDateColumn,
+    UpdateDateColumn,
+    OneToOne,
+    JoinColumn,
+} from 'typeorm';
+import { Profile } from './profile';
 
 @Entity('users')
 export class User {
@@ -22,4 +31,11 @@ export class User {
 
     @UpdateDateColumn()
     updated_at: Date;
+
+    @Column({ nullable: true })
+    profileId: number;
+
+    @OneToOne(() => Profile, { eager: true, cascade: true })
+    @JoinColumn()
+    profile: Profile;
 }
