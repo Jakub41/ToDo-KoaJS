@@ -1,13 +1,8 @@
 export const UserMutation = `
     extend type Mutation {
       createUser (
-        user: NewUserPatch!
-        {
-          NewProfile
-          (
-            profile: Profile!
-          )
-        }
+        user: NewUserPatch!,
+        profile: NewProfile!
       ): User
       updateUser (
         id: String!
