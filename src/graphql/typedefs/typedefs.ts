@@ -19,7 +19,7 @@ const TypeDefs = [
     Types.userTypes.mutation,
 
     // Profile Type Def
-
+    Types.profileType.profile,
     ...types,
 ];
 
