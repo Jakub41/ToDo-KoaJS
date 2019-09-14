@@ -9,6 +9,7 @@ export const createUserMutation = {
         const user = {
             id: uuid(),
             ...attrs,
+            profile: Entities.profile,
         };
         await repository.save(user);
         return user;

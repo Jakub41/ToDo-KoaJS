@@ -1,5 +1,6 @@
 export const Profile = `
     type Profile {
-        age: Number!
+        id  : String!
+        age : Number
     }
 `;

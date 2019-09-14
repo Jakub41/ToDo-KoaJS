@@ -7,5 +7,6 @@ export const User = `
         confirmed     : Boolean
         created_at    : Date
         updated_at    : Date
+        profile       : Profile
     }
 `;
