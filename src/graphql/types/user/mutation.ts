@@ -1,7 +1,7 @@
 export const UserMutation = `
     extend type Mutation {
       createUser (
-        user: NewUserPatch!,
+        user: NewUserPatch!
         profile: NewProfile!
       ): User
       updateUser (
@@ -10,6 +10,6 @@ export const UserMutation = `
       ): User
       deleteUser (
         id: String!
-      ): User
+      ): DeleteUserPayload
     }
 `;
