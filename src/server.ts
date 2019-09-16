@@ -13,7 +13,7 @@ const bootstrap = async (): Promise<void> => {
     app.use(routes.routes())
         .use(routes.allowedMethods())
         .use(json())
-        .use(logger())
+        //.use(logger())
         .listen(config.serverPort, () =>
             console.log(`Server running at ${config.serverUrl} ${server.graphqlPath} Port: ${config.serverPort}`),
         );
