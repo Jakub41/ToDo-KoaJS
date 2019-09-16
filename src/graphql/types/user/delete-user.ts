@@ -1,8 +1,7 @@
 import { gql } from 'apollo-server-koa';
 
-export const Profile = gql`
-    type Profile {
+export const DeleteUser = gql`
+    input DeleteUser {
         id: String!
-        age: Int
     }
 `;

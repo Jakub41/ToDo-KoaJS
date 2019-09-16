@@ -1,8 +1,10 @@
-export const NewUserPatch = `
+import { gql } from 'apollo-server-koa';
+
+export const NewUserPatch = gql`
     input NewUserPatch {
-        name        : String
-        last_name   : String
-        email       : String!
-        confirmed   : String
+        name: String
+        last_name: String
+        email: String!
+        confirmed: String
     }
 `;

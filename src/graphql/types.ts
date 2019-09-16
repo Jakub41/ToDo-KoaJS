@@ -10,7 +10,7 @@ export const types = [
     Types.userTypes.user,
     Types.userTypes.newUser,
     Types.userTypes.updateUser,
-    Types.userTypes.deleteUser,
+    Types.userTypes.deletedUser,
 
     // <-- add type here
 ];

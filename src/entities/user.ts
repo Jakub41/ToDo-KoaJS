@@ -35,7 +35,7 @@ export class User {
     @Column({ nullable: true })
     profileId: number;
 
-    @OneToOne(() => Profile, { eager: true, cascade: true })
+    @OneToOne(() => Profile, { eager: true, cascade: true, onDelete: 'CASCADE' })
     @JoinColumn()
     profile: Profile;
 }
