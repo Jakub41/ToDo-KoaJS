@@ -6,13 +6,13 @@ export const server = new ApolloServer({
     schema: schema,
     playground: true,
 
-    formatError: error => {
-        console.log(error);
-        return error;
-    },
+    // formatError: error => {
+    //     console.log(error);
+    //     return error;
+    // },
 
-    formatResponse: response => {
-        console.log(response);
-        return response;
-    },
+    // formatResponse: response => {
+    //     console.log(response);
+    //     return response;
+    // },
 });
