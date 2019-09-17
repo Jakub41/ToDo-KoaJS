@@ -6,21 +6,21 @@ import { Entities } from '../../../entities/entities';
 export const createUserMutation = {
     async createUser(_, { user: attrs, profile: args }): Promise<typeof user> {
         const repositoryUser = getRepository(Entities.user);
-        const repositoryProfile = getRepository(Entities.profile);
+
+        const profile = {
+            id: uuid(),
+            ...args,
+        };
 
         const user = {
             id: uuid(),
             ...attrs,
-        };
-
-        const profile = {
-            id: uuid(),
-            user: user,
-            ...args,
+            profile: profile,
         };
 
         await repositoryUser.save(user);
-        await repositoryProfile.save(profile);
+
+        console.log(user);
 
         return user;
     },

@@ -9,7 +9,7 @@ export class Profile extends BaseEntity {
     @Column('int', { nullable: true })
     age: number;
 
-    @OneToOne(() => User, { eager: true, cascade: true, onDelete: 'CASCADE' })
+    @OneToOne(() => User, user => user.profile, { eager: true, onDelete: 'CASCADE' })
     @JoinColumn()
     user: User;
 }
