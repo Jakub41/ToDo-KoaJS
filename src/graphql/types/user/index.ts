@@ -5,12 +5,14 @@ import { DeleteUser } from './delete-user';
 
 import { UserQuery } from './query';
 import { UserMutation } from './mutation';
+import { DeleteUserResponse } from './delete-user-response';
 
 export const UserType = {
     user: User,
     newUser: NewUserPatch,
     updateUser: UserPatch,
-    deletedUser: DeleteUser,
+    deleteUser: DeleteUser,
+    deletedUser: DeleteUserResponse,
     query: UserQuery,
     mutation: UserMutation,
 };
