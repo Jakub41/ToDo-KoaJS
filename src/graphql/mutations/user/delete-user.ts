@@ -3,22 +3,20 @@ import { Entities } from '../../../entities/entities';
 
 export const deleteUserMutation = {
     async deleteUser(_, { id }): Promise<typeof user> {
+        const response = {
+            responseCode: 500,
+            message: 'Error, user not deleted',
+            user: null,
+        };
+
         const repository = getRepository(Entities.user);
         const user = await repository.findOne({ id });
 
-        const success = 500;
-        const message = 'Error not deleted';
-
-        if (user) {
-            success: 200;
-            message: 'User deleted successfully';
-            await repository.delete({ id });
+        if (user && repository.delete({ id })) {
+            response.responseCode = 200;
+            response.message = 'User deleted successfully';
+            response.user = user;
         }
-
-        const response = {
-            success: success,
-            deletedUser: user,
-        };
 
         return response;
     },
