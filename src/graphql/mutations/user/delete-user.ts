@@ -2,7 +2,7 @@ import { getRepository } from 'typeorm';
 import { Entities } from '../../../entities/entities';
 
 export const deleteUserMutation = {
-    async deleteUser(_, { id }): Promise<typeof user> {
+    async deleteUser(_, { id }): Promise<typeof deleteUserMutation> {
         const response = {
             responseCode: 500,
             message: 'Error, user not deleted',

@@ -2,8 +2,9 @@ import { gql } from 'apollo-server-koa';
 
 export const DeleteUserResponse = gql`
     type DeleteUserResponse {
-        responseCode: number!
-        message: string!
-        user: any!
+        id: String
+        responseCode: Int!
+        message: String!
+        user: User
     }
 `;
