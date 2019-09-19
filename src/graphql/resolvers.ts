@@ -24,7 +24,8 @@ export const resolvers = {
 
         // User Mutations
         ...Mutations.user.create,
-        ...Mutations.user.update, // <-- add mutation to schema
+        ...Mutations.user.update,
+        ...Mutations.user.delete, // <-- add mutation to schema
     },
 
     // Custom Scalars

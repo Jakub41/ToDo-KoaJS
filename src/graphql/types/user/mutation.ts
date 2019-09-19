@@ -1,11 +1,9 @@
-export const UserMutation = `
+import { gql } from 'apollo-server-koa';
+
+export const UserMutation = gql`
     extend type Mutation {
-      createUser (
-        user: NewUserPatch!
-      ): User
-      updateUser (
-        id: String!
-        patch: UserPatch!
-      ): User
+        createUser(user: NewUserPatch!, profile: NewProfile!): User
+        updateUser(id: String!, patch: UserPatch!): User
+        deleteUser(id: String!): DeleteUserResponse
     }
 `;

@@ -18,6 +18,10 @@ const TypeDefs = [
     Types.userTypes.query,
     Types.userTypes.mutation,
 
+    // Profile Type Def
+    Types.profileType.newProfile,
+    Types.profileType.profile,
+
     ...types,
 ];
 
