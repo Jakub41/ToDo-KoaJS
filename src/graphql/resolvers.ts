@@ -16,7 +16,7 @@ export const resolvers = {
     },
 
     Mutation: {
-        // Card Muations
+        // Card Mutations
         ...Mutations.card.create,
         ...Mutations.card.update,
         ...Mutations.card.toggle,
@@ -25,7 +25,12 @@ export const resolvers = {
         // User Mutations
         ...Mutations.user.create,
         ...Mutations.user.update,
-        ...Mutations.user.delete, // <-- add mutation to schema
+        ...Mutations.user.delete,
+
+        // Profile Mutations
+        ...Mutations.profile.update,
+
+        // <-- add mutation to schema
     },
 
     // Custom Scalars

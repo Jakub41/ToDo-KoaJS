@@ -10,6 +10,7 @@ const schemaDefinition = `
 
 const TypeDefs = [
     schemaDefinition,
+
     // Card Type Def
     Types.cardTypes.query,
     Types.cardTypes.mutation,
@@ -21,6 +22,7 @@ const TypeDefs = [
     // Profile Type Def
     Types.profileType.newProfile,
     Types.profileType.profile,
+    Types.profileType.mutation,
 
     ...types,
 ];
