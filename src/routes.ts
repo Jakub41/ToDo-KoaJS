@@ -9,7 +9,7 @@ app.use(koaBody());
 
 routes.get('/', async (ctx, next) => {
     ctx.body = {
-        title: 'To Do GrapQL API',
+        title: 'To Do GraphQL API',
         author: 'Jakub Lemiszewski',
         link: 'http://localhost:8080/graphql',
         gitHub: 'https://github.com/Jakub41/ToDo-KoaJS',
