@@ -27,4 +27,13 @@ const config: Config = {
     database: process.env.DB_DATABASE,
 };
 
+/* Env Errors */
+if (!isFinite(config.serverPort) || config.serverPort < 1 || config.serverPort > 65535)
+    throw new Error('Environment SERVER_PORT is not valid');
+if (!config.serverUrl) throw new Error('Environment variable "SERVER_URL" is not defined');
+if (!config.dbHost) throw new Error('Environment variable "DB_HOST" is not defined');
+if (!config.dbUsername) throw new Error('Environment variable "DB_USERNAME" is not defined');
+if (!config.dbPassword) throw new Error('Environment variable "DB_PASSWORD" is not defined');
+if (!config.database) throw new Error('Environment variable "DB_DATABASE" is not defined');
+
 export { config };
