@@ -5,6 +5,13 @@ import { Entities } from '../../../entities/entities';
 
 export const createUserMutation = {
     async createUser(_, { user: attrs, profile: args }): Promise<typeof user> {
+        const response = {
+            responseCode: 500,
+            message: 'Error, user and profile not created',
+            user: null,
+            profile: null,
+        };
+
         const repositoryUser = getRepository(Entities.user);
 
         const profile = {
@@ -18,10 +25,13 @@ export const createUserMutation = {
             profile: profile,
         };
 
-        await repositoryUser.save(user);
+        if (user && profile && repositoryUser.save(user)) {
+            response.responseCode = 200;
+            response.message = 'User and Profile created successfully';
+            response.user = user;
+            response.user = profile;
+        }
 
-        console.log(user);
-
-        return user;
+        return response;
     },
 };

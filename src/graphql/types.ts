@@ -11,6 +11,7 @@ export const types = [
     Types.userTypes.newUser,
     Types.userTypes.updateUser,
     Types.userTypes.deletedUser,
+    Types.userTypes.createdUserResponse,
 
     // Profile Types
     Types.profileType.profilePatch,
