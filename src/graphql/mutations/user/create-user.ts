@@ -4,7 +4,7 @@ import { getRepository } from 'typeorm';
 import { Entities } from '../../../entities/entities';
 
 export const createUserMutation = {
-    async createUser(_, { user: attrs, profile: args }): Promise<typeof user> {
+    async createUser(_, { user: attrs, profile: args }): Promise<typeof createUserMutation> {
         const response = {
             responseCode: 500,
             message: 'Error, user and profile not created',

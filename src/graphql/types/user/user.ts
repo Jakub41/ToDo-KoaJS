@@ -6,8 +6,8 @@ export const User = gql`
         email: String
         password: String
         confirmed: Boolean
-        created_at: Date!
-        updated_at: Date!
+        created_at: Date
+        updated_at: Date
         profile: Profile
     }
 `;

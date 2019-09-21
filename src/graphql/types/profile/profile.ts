@@ -8,7 +8,7 @@ export const Profile = gql`
         date_of_birth: String
         avatar_url: String
         description: String
-        created_at: Date!
-        updated_at: Date!
+        created_at: Date
+        updated_at: Date
     }
 `;
