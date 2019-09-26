@@ -1,10 +1,10 @@
 version: '3.7'
 
-# Postgres
 services:
+  # Postgres
   db:
     image: postgres
-    environment: 
+    environment:
       POSTGRES_PASSWORD: postgres
       POSTGRES_USER: postgres
       POSTGRES_DB: node_docker_example
@@ -12,15 +12,15 @@ services:
       - ./pgdata:/var/lib/postgresql/data
     ports:
       - "5432:5432"
-  
+
   # Node
   nod_dev_env:
     build: .
-    depends_on: 
+    depends_on:
       - db
     container_name: node-docker
     ports:
-      - 8080:4000
+      - 4000:4000
     volumes:
       - ./:/home/app
-    
+

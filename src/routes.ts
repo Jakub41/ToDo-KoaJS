@@ -11,7 +11,7 @@ routes.get('/', async (ctx, next) => {
     ctx.body = {
         title: 'To Do GraphQL API',
         author: 'Jakub Lemiszewski',
-        link: 'http://localhost:8080/graphql',
+        link: 'http://localhost:4000/graphql',
         gitHub: 'https://github.com/Jakub41/ToDo-KoaJS',
         status: 'Running',
     };

@@ -6,16 +6,19 @@
         "experimentalDecorators": true,
         "moduleResolution": "node",
         "lib": [
-            "es6"
+          "es5",
+          "es6"
         ],
         "types": [
             "node"
         ],
         "sourceMap": true,
-        "baseUrl": "./src"
+        "baseUrl": "./src",
+        "outDir": "./build"
     },
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "**/*.spec.ts",
+        "./build"
     ]
 }

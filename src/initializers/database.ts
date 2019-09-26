@@ -3,6 +3,8 @@ import { Entities } from '../entities/entities';
 
 import { config } from './config';
 
+import { clk, log } from '../helpers/console-helper';
+
 export const databaseInitializer = async (): Promise<void> => {
     return await createConnection({
         type: 'postgres',
@@ -16,7 +18,7 @@ export const databaseInitializer = async (): Promise<void> => {
         synchronize: true,
     })
         .then(async () => {
-            console.log(`Database connection established on port: ${config.dbPort}`);
+            log(clk.bold(`Database connection established on Port:`, clk.magenta(`${config.dbPort}`)));
         })
-        .catch(error => console.log('Connection error: ', error));
+        .catch(error => log(clk.bold.underline('Connection error: ', clk.red(error))));
 };
