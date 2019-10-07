@@ -20,5 +20,5 @@ export const databaseInitializer = async (): Promise<void> => {
         .then(async () => {
             log(clk.bold(`Database connection established on Port:`, clk.magenta(`${config.dbPort}`)));
         })
-        .catch(error => log(clk.bold.underline('Connection error: ', clk.red(error))));
+        .catch(error => log(clk.bold.underline('Connection error: ', clk.bold.red(error))));
 };
