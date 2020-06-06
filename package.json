@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
-    "apollo-server-koa": "^2.9.0",
+    "apollo-server-koa": "^2.14.2",
     "dotenv": "^8.1.0",
     "graphql": "^14.5.1",
     "graphql-iso-date": "^3.6.1",
